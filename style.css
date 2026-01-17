@@ -35,6 +35,27 @@
 
 }
 
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.navbar,
+.banner {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+main>section {
+  margin-top: 130px;
+}
+
+.small-text {
+  font-size: 16px;
+  color: #727272;
+}
+
 /* header style */
 
 
@@ -50,7 +71,6 @@
   font-size: 3rem;
 }
 
-.nav-links {}
 
 .nav-item {
   list-style: none;
@@ -62,11 +82,6 @@
   font-weight: 500;
 }
 
-.navbar,
-.banner {
-  max-width: 1140px;
-  margin: 0 auto;
-}
 
 .banner img {
   max-width: 1140px;
@@ -90,10 +105,91 @@
   width: 100%;
 }
 
-/* responsive header */
+
+/* team section realated style */
+.teams {
+  align-items: center;
+  margin-top: 130px;
+}
+
+.team-img-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.our-features {
+  margin: 73px;
+}
+
+.feature-title {
+  font-size: 2.35rem;
+}
+
+.our-features h3 {
+  white-space: nowrap;
+}
+
+#q-list {
+  font-size: 2.35rem;
+  font-weight: 500;
+}
+
+#of-our {
+  font-size: 2.35rem;
+  font-weight: bold;
+
+}
+
+#features {
+  color: #FF900E;
+  font-size: 2.35rem;
+  font-weight: bold;
+
+}
+
+/* facts related style */
+.fact-contant {
+  margin: 130px 0;
+  max-width: 570px;
+}
+
+.fact-card {
+  border: 1px solid #FF900E;
+  margin-bottom: 20px;
+  padding: 45px 36px 59px 35px;
+  border-radius: 8px;
+  text-align: center;
+  width: 180px;
+  height: 180px;
+}
+
+.fact-font {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  justify-items: center;
+  align-items: center;
+}
+
+.face-num {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 5px 0 10px 0;
+}
+
+.fact-name {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin: 10px 0 0 0;
+  color: #727272;
+}
+
+/* responsive header for 0-576px */
 @media screen and (max-width:576px) {
 
-  .navbar {
+  .navbar,
+  .teams {
     flex-direction: column;
   }
 
@@ -106,5 +202,32 @@
     padding: 10px 15px;
     font-weight: 600;
     font-size: 1rem;
+  }
+
+  .teams .team-img-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+}
+
+/* responsive for medium device */
+@media screen and (min-width:576px) and (max-width:992px) {
+  .teams {
+    flex-direction: column;
+  }
+
+  .team-img-container img {
+    width: 100%;
+    height: auto;
+  }
+
+  .banner-title {
+    font-weight: 600;
+    font-size: 2rem;
+  }
+
+  .brand {
+    font-weight: bold;
+    font-size: 2.1rem;
   }
 }
